@@ -11,6 +11,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="/etch-a-sketch/main.js"></script>
   </head>
   <body>
     <h1>etch-a-sketch</h1>
@@ -18,11 +19,14 @@
       <h6>select the size</h6>
       <button id="popup" class="btn btn-danger">Select</button>
     </div>
+    <p id="message"></p>
     <div class="board"></div>
     <div class="footer">
-      <button class="btn btn-light">white</button>
-      <button class="btn btn-warning">random</button>
-      <button class="btn btn-dark">black</button>
+      <button class="btn btn-dark" onclick="setColor('black')">black</button>
+      <button class="btn btn-warning" onclick="setColor('random')">
+        random
+      </button>
+      <button class="btn btn-light" onclick="resetBoard()">reset</button>
     </div>
   </body>
 </html>
